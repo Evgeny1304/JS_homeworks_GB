@@ -1,0 +1,8 @@
+[
+  {"name": "Ferrari", "small_img": "http://127.0.0.1:8080/img/ferrari-small.jpg", "big_img": "http://127.0.0.1:8080/img/ferrari-big.jpg"},
+  {"name": "Lamborghini", "small_img": "http://127.0.0.1:8080/img/lambo-small.jpg", "big_img": "http://127.0.0.1:8080/img/lambo-big.jpg"},
+  {"name": "Aston Martin", "small_img": "http://127.0.0.1:8080/img/aston-small.jpg", "big_img": "http://127.0.0.1:8080/img/aston-big.jpg"},
+  {"name": "Porsche", "small_img": "http://127.0.0.1:8080/img/porsche-small.jpg", "big_img": "http://127.0.0.1:8080/img/porsche-big.jpg"},
+  {"name": "Mclaren", "small_img": "http://127.0.0.1:8080/img/mclaren-small.jpg", "big_img": "http://127.0.0.1:8080/img/mclaren-big.jpg"},
+  {"name": "Bugatti", "small_img": "http://127.0.0.1:8080/img/bugatti-small.jpg", "big_img": "http://127.0.0.1:8080/img/bugatti-big.jpg"}
+]
