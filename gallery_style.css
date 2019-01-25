@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 0 auto;
+    width: 700px;
+}
+
+.button_img{
+    outline: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.modal_img{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 500px;
+    top: 320px;
+    overflow: auto;
+    background: rgba(0,0,0,0);
+}
+
+.close{
+    font-weight: 700;
+    font-size: 50px;
+    border: none;
+    background: none;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    top: 55px;
+    left: 600px;
+    color: #804a74;
+}
