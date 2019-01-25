@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка формы на введенные данные</title>
+    <style>
+        .ship_form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 400px;
+            justify-content: space-around;
+        }
+
+        .input_form{
+            border: 1px solid green;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 20px;
+            font-size: 14px;
+            outline: 0;
+        }
+
+        .area_form{
+            border: 1px solid green;
+            outline: 0;
+        }
+
+        .area_form{
+            font-size: 14px;
+        }
+
+        .button_form{
+            cursor: pointer;
+            border: 1px solid green;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 17px;
+            font-size: 14px;
+            font-weight: 700;
+            background-color: #ffffff;
+            color: green;
+            outline: 0;
+        }
+
+        .button_form:hover{
+            color: #ffffff;
+            background-color: green;
+        }
+
+        .warning{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form" class="ship_form" action="#">
+        <input id="name" class="input_form" type="text" placeholder="Введите имя">
+        <input id="phone" class="input_form" type="text" placeholder="Введите номер телефона">
+        <input id="mail" class="input_form" type="text" placeholder="Введите e-mail">
+        <textarea name="area_comment" class="area_form" id="area" cols="30" rows="10" placeholder="Оставьте комментарий"></textarea>
+        <button id="send" class="button_form" type="button">Отправить</button>
+    </form>
+    <script src="Replace.js"></script>
+</body>
+</html>
