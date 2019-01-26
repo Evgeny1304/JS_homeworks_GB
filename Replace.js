@@ -7,7 +7,7 @@ console.log("\'Hello, world\'".replace(regexp,"\""));
 
 //Задание 2
 
-var regexp1 = /^'|'$/g;
+var regexp1 = /('\B|\B')/g;
 
 console.log("\'I'm Evgeny Khabirov. I'm 28.\'".replace(regexp1,"\""));
 
