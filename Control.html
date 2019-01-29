@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с вкладками</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        .tabs{
+            display: flex;
+        }
+
+        .tab{
+            outline: 0;
+            cursor: pointer;
+            background: #ffffff;
+            color: #229512;
+            font-size: 16px;
+            line-height: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border: 1px solid #229512;
+        }
+
+        .tab:focus{
+            background: #229512;
+            color: #ffffff;
+        }
+
+        .full_text{
+            display: none;
+            border: 1px solid #229512;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button id="tab1" class="tab" data-tab="full_tab1" data-tab1="full_tab2" data-tab2="full_tab3">Первая вкладка</button>
+            <button id="tab2" class="tab" data-tab="full_tab2" data-tab1="full_tab1" data-tab2="full_tab3">Вторая вкладка</button>
+            <button id="tab3" class="tab" data-tab="full_tab3" data-tab1="full_tab1" data-tab2="full_tab2">Третья вкладка</button>
+        </div>
+        <div id="full_tab1" class="full_text">
+            Привет мир!
+        </div>
+        <div id="full_tab2" class="full_text">
+            Hello world!
+        </div>
+        <div id="full_tab3" class="full_text">
+            Hola mundo!
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        (function($){
+            $(".tab").on("click", function(event){
+               $("#"+$(this).attr("data-tab")).show();
+               $("#"+$(this).attr("data-tab1")).hide();
+               $("#"+$(this).attr("data-tab2")).hide();
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
