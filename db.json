@@ -1,0 +1,162 @@
+{
+  "users": [
+    {
+      "name": "Dmitry",
+      "id": 1
+    },
+    {
+      "name": "Vasya",
+      "id": 2
+    },
+    {
+      "name": "Petya",
+      "id": 3
+    },
+    {
+      "name": "Kolya",
+      "id": 4
+    }
+  ],
+  "goods": [
+    {
+      "id": 1,
+      "name": "iPhone X",
+      "price": 50000,
+      "category": "devices"
+    },
+    {
+      "id": 2,
+      "name": "iPhone XS",
+      "price": 70000,
+      "category": "devices"
+    },
+    {
+      "id": 3,
+      "name": "Яблоко",
+      "price": 100,
+      "category": "fruits"
+    },
+    {
+      "id": 4,
+      "name": "Арбуз",
+      "price": 100,
+      "category": "fruits"
+    },
+    {
+      "id": 5,
+      "name": "Персик",
+      "price": 100,
+      "category": "fruits"
+    }
+  ],
+  "cart": [
+    {
+      "id": "5",
+      "name": "Персик",
+      "price": "100",
+      "category": "fruits",
+      "quantity": "4"
+    },
+    {
+      "id": "4",
+      "name": "Арбуз",
+      "price": "100",
+      "category": "fruits",
+      "quantity": "3"
+    },
+    {
+      "id": "3",
+      "name": "Яблоко",
+      "price": "100",
+      "category": "fruits",
+      "quantity": "3"
+    },
+    {
+      "id": "2",
+      "name": "iPhone XS",
+      "price": "70000",
+      "category": "devices",
+      "quantity": "4"
+    }
+  ],
+  "reviews": [
+    {
+      "comments": "Все понравилось",
+      "id": 1
+    },
+    {
+      "comments": "Все отлично",
+      "id": 2
+    },
+    {
+      "comments": "Все отлично",
+      "id": 3
+    },
+    {
+      "comments": "Все отлично",
+      "id": 4
+    },
+    {
+      "comments": "Все отлично",
+      "id": 5
+    },
+    {
+      "comments": "Все отлично",
+      "id": 6
+    },
+    {
+      "comments": "Все отлично",
+      "id": 7
+    },
+    {
+      "comments": "Все круто",
+      "id": 8
+    },
+    {
+      "comments": "Все круто",
+      "id": 9
+    },
+    {
+      "comments": "Все круто",
+      "id": 10
+    },
+    {
+      "comments": "Все круто",
+      "id": 11
+    },
+    {
+      "comments": "Все отл",
+      "id": 12
+    },
+    {
+      "comments": "Все отл",
+      "id": 13
+    },
+    {
+      "comments": "хххххххх",
+      "id": 14
+    },
+    {
+      "comments": "Супер",
+      "id": 15
+    }
+  ],
+  "accepted-reviews": [
+    {
+      "comments": "Все отл",
+      "id": "12"
+    },
+    {
+      "comments": "Все отл",
+      "id": "13"
+    },
+    {
+      "comments": "хххххххх",
+      "id": "14"
+    },
+    {
+      "comments": "Супер",
+      "id": "15"
+    }
+  ]
+}
