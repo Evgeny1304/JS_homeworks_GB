@@ -51,25 +51,11 @@
   ],
   "cart": [
     {
-      "id": "5",
-      "name": "Персик",
-      "price": "100",
-      "category": "fruits",
-      "quantity": "4"
-    },
-    {
       "id": "4",
       "name": "Арбуз",
       "price": "100",
       "category": "fruits",
-      "quantity": "3"
-    },
-    {
-      "id": "3",
-      "name": "Яблоко",
-      "price": "100",
-      "category": "fruits",
-      "quantity": "3"
+      "quantity": "4"
     },
     {
       "id": "2",
@@ -77,6 +63,27 @@
       "price": "70000",
       "category": "devices",
       "quantity": "4"
+    },
+    {
+      "id": "1",
+      "name": "iPhone X",
+      "price": "50000",
+      "category": "devices",
+      "quantity": "4"
+    },
+    {
+      "id": "5",
+      "name": "Персик",
+      "price": "100",
+      "category": "fruits",
+      "quantity": "1"
+    },
+    {
+      "id": "3",
+      "name": "Яблоко",
+      "price": "100",
+      "category": "fruits",
+      "quantity": "1"
     }
   ],
   "reviews": [
@@ -157,6 +164,48 @@
     {
       "comments": "Супер",
       "id": "15"
+    }
+  ],
+  "carousel": [
+    {
+      "id": 1,
+      "name": "product1",
+      "source": "http://127.0.0.1:8080/img/Layer_2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "product2",
+      "source": "http://127.0.0.1:8080/img/Layer_3.jpg"
+    },
+    {
+      "id": 3,
+      "name": "product3",
+      "source": "http://127.0.0.1:8080/img/Layer_4.jpg"
+    },
+    {
+      "id": 4,
+      "name": "product4",
+      "source": "http://127.0.0.1:8080/img/Layer_5.jpg"
+    },
+    {
+      "id": 5,
+      "name": "product5",
+      "source": "http://127.0.0.1:8080/img/Layer_6.jpg"
+    },
+    {
+      "id": 6,
+      "name": "product6",
+      "source": "http://127.0.0.1:8080/img/Layer_7.jpg"
+    },
+    {
+      "id": 7,
+      "name": "product7",
+      "source": "http://127.0.0.1:8080/img/Layer_8.jpg"
+    },
+    {
+      "id": 8,
+      "name": "product8",
+      "source": "http://127.0.0.1:8080/img/Layer_9.jpg"
     }
   ]
 }
