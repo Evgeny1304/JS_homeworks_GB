@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        .ship_form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 400px;
+            justify-content: space-around;
+        }
+
+        .input_form {
+            border: 1px solid green;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 20px;
+            font-size: 14px;
+            outline: 0;
+        }
+
+        .area_form {
+            border: 1px solid green;
+            outline: 0;
+        }
+
+        .area_form {
+            font-size: 14px;
+        }
+
+        .button_form {
+            cursor: pointer;
+            border: 1px solid green;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 17px;
+            font-size: 14px;
+            font-weight: 700;
+            background-color: #ffffff;
+            color: green;
+            outline: 0;
+        }
+
+        .button_form:hover {
+            color: #ffffff;
+            background-color: green;
+        }
+
+        #warning_message {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<form id="form" class="ship_form" action="#">
+    <input id="name" class="input_form" type="text" placeholder="Введите имя">
+    <input id="phone" class="input_form" type="text" placeholder="Введите номер телефона">
+    <input id="mail" class="input_form" type="text" placeholder="Введите e-mail">
+    <input id="birth" class="input_form" type="text" placeholder="Введите дату рождения">
+    <input class="input_form" type="text" id="input_city" list="city_list" placeholder="Введите город">
+    <datalist id="city_list" class="cities">
+
+    </datalist>
+    <textarea name="area_comment" class="area_form" id="area" cols="30" rows="10"
+              placeholder="Оставьте комментарий"></textarea>
+    <button id="send" class="button_form" type="button">Отправить</button>
+</form>
+<div id="warning_message" title="Неверно заполнено">
+    <ul id="messages">
+        <li id="warning_name">Имя</li>
+        <li id="warning_phone">Телефон</li>
+        <li id="warning_mail">E-mail</li>
+    </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    (function ($) {
+        //Проверка корректности формы
+        var regPhone = /^\+\d\(\d{3}\)\d{3}-\d{4}$/;
+        var regName = /^[A-za-zА-яа-я]+$/gi;
+        var regMail = /[a-z-\.]+@[a-z]+\.[a-z]{2}$/gi;
+
+        $("#send").on("click", function () {
+            if (regName.test($("#name").val()) === false) {
+                $("#name").css("border", "1px solid red");
+                $("#name").effect("bounce", 5000);
+                $("#warning_name").show();
+                $("#warning_message").dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            } else {
+                $("#name").css("border", "1px solid green");
+                $("#warning_name").hide();
+            }
+
+            if (regPhone.test($("#phone").val()) === false) {
+                $("#phone").css("border", "1px solid red");
+                $("#phone").effect("bounce", 5000);
+                $("#warning_phone").show();
+                $("#warning_message").dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            } else {
+                $("#phone").css("border", "1px solid green");
+                $("#warning_phone").hide();
+            }
+
+            if (regMail.test($("#mail").val()) === false) {
+                $("#mail").css("border", "1px solid red");
+                $("#mail").effect("bounce", 5000);
+                $("#warning_mail").show();
+                $("#warning_message").dialog({
+                    modal: true,
+                    buttons: {
+                        Ok: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            } else {
+                $("#mail").css("border", "1px solid green");
+                $("#warning_mail").hide();
+            }
+        });
+
+        //добавление даты рождения
+        $("#birth").datepicker({
+            firstDay: 1,
+            dateFormat: "dd.mm.yy",
+            dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+            monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        });
+
+        //добавление списка городов
+        $.ajax({
+            url: "http://127.0.0.1:8080/cities.json",
+            dataType: "json",
+            success: function (option) {
+                $("#input_city").on("keyup", function () {
+                    $("#city_list").empty();
+                    for (var i = 0; i < option.length; i++) {
+                        if (option[i].city.startsWith($("#input_city").val()) === true) {
+                            var $optionCity = $("<option/>").text(option[i].city);
+                            $("#city_list").append($optionCity);
+                        }
+                    }
+                });
+            }
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
