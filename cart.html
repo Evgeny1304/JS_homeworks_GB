@@ -1,24 +1,58 @@
 <html>
-  <head>
-    <title>ДЗ к уроку 5</title>
-    <meta charset="UTF-8"/>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <ul id="goods"></ul>
-    <div id="cart"></div>
-    <hr>
-    <textarea name="area-comment" id="comment" placeholder="Оставьте отзыв" cols="30" rows="10"></textarea>
-    <button type="button" id="send">Отправить отзыв</button>
-    <div id="comment_block"></div>
-    <hr>
-    <div id="accepted_comments"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="cart.js"></script>
-  </body>
+<head>
+  <title>ДЗ к уроку 6</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .slider_block {
+      width: 1050px;
+      height: 280px;
+      border: 2px solid black;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      width: 2096px;
+      position: relative;
+    }
+
+    #right, #left {
+      position: absolute;
+      cursor: pointer;
+      height: 280px;
+    }
+
+    #right {
+      left: 985px;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="slider_block">
+  <div id="slider" class="slider">
+    <button id="left">Влево</button>
+    <button id="right">Вправо</button>
+  </div>
+</div>
+<ul id="goods"></ul>
+<div id="cart"></div>
+<hr>
+<textarea name="area-comment" id="comment" placeholder="Оставьте отзыв" cols="30" rows="10"></textarea>
+<button type="button" id="send">Отправить отзыв</button>
+<div id="comment_block"></div>
+<hr>
+<div id="accepted_comments"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="cart.js"></script>
+</body>
 </html>
